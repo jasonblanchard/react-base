@@ -30,6 +30,7 @@ gulp.task('copy', function() {
 
 gulp.task('watch', function() {
   gulp.watch(path.HTML, ['copy']);
+  gulp.watch(path.CSS_SRC, ['copy']);
 
   var watcher  = watchify(browserify({
     entries: [path.ENTRY_POINT],
